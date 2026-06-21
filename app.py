@@ -33,7 +33,7 @@ st.markdown("""
             text-align: center;
         }
         .attendee-title {
-            color: #009DD9;
+            color: #0567FA;
             font-family: 'Inter', sans-serif;
             font-weight: 800;
             font-size: 3.0rem;
@@ -41,7 +41,7 @@ st.markdown("""
             letter-spacing: -0.5px;
         }
         .attendee-subtitle {
-            color: #009DD9;
+            color: #0567FA;
             font-size: 1rem;
             margin-bottom: 2rem;
             opacity: 0.8;
