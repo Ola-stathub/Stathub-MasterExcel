@@ -25,7 +25,7 @@ st.markdown("""
         }
         .attendee-card {
             background: linear-gradient(135deg, #0d1b2a 0%, #1b4965 100%);
-            border: 1px solid #62b6cb;
+            border: 1px solid #ffffff;
             padding: 3rem 2.5rem;
             border-radius: 16px;
             box-shadow: 0 8px 32px 0 rgba(0, 180, 216, 0.2);
@@ -33,15 +33,15 @@ st.markdown("""
             text-align: center;
         }
         .attendee-title {
-            color: #caf0f8;
+            color: #009DD9;
             font-family: 'Inter', sans-serif;
             font-weight: 800;
-            font-size: 2.2rem;
+            font-size: 3.0rem;
             margin-bottom: 0.5rem;
             letter-spacing: -0.5px;
         }
         .attendee-subtitle {
-            color: #90e0ef;
+            color: #009DD9;
             font-size: 1rem;
             margin-bottom: 2rem;
             opacity: 0.8;
