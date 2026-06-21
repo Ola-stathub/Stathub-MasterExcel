@@ -9,16 +9,13 @@ MEET_LINK = "https://meet.google.com/yfi-asbp-hog"
 MAX_JOINS = 3
 ADMIN_PASSWORD = "AdeolaJane"
 GOOGLE_SHEET_NAME = "StatHub Event Database"
-SERVICE_ACCOUNT_FILE = "stathubmasterexcel-3947e20526e0.json"
 
 # Set up page configurations
 st.set_page_config(page_title="StatHub Event Access", page_icon="🎓", layout="centered")
 
 # --- CENTRALIZED CUSTOM THEME INJECTION ---
-# Completely hides the sidebar/header and styles our custom UI components dynamically
 st.markdown("""
     <style>
-        /* Hide sidebar navigation, default headers, and footers universally */
         [data-testid="stSidebar"], section[data-testid="stSidebarNav"], 
         header, footer {
             display: none !important;
@@ -26,10 +23,8 @@ st.markdown("""
         .block-container {
             padding-top: 3rem !important;
         }
-        
-        /* ATTENDEE PORTAL: Royal & Sky Blue Theme Container */
         .attendee-card {
-            background: #ffffff;;
+            background: linear-gradient(135deg, #0d1b2a 0%, #1b4965 100%);
             border: 1px solid #62b6cb;
             padding: 3rem 2.5rem;
             border-radius: 16px;
@@ -38,21 +33,19 @@ st.markdown("""
             text-align: center;
         }
         .attendee-title {
-            color: #4169e1;
+            color: #caf0f8;
             font-family: 'Inter', sans-serif;
-            font-weight: 1000;
-            font-size: 3.0rem;
+            font-weight: 800;
+            font-size: 2.2rem;
             margin-bottom: 0.5rem;
-            letter-spacing: -0.1px;
+            letter-spacing: -0.5px;
         }
         .attendee-subtitle {
-            color: #4169e1;
+            color: #90e0ef;
             font-size: 1rem;
             margin-bottom: 2rem;
             opacity: 0.8;
         }
-
-        /* ADMIN PORTAL: Clean Dark Sleek Dashboard Wrapper */
         .admin-card {
             background-color: #141419;
             border: 1px solid #2d2d38;
@@ -78,8 +71,10 @@ def connect_sheet():
         "https://www.googleapis.com/auth/spreadsheets",
         "https://www.googleapis.com/auth/drive"
     ]
-    creds = Credentials.from_service_account_file(
-        SERVICE_ACCOUNT_FILE,
+    # Dynamically pull the credentials dict from the Streamlit Cloud secure secrets vault
+    creds_dict = st.secrets["gcp_service_account"]
+    creds = Credentials.from_service_account_info(
+        creds_dict,
         scopes=scope
     )
     client = gspread.authorize(creds)
@@ -118,7 +113,6 @@ current_page = query_params.get("nav", "attendee")
 
 # --- ATTENDEE PORTAL (ROYAL/SKY BLUE STYLE) ---
 if current_page != "admin":
-    # HTML Visual container styling
     st.markdown("""
         <div class="attendee-card">
             <div class="attendee-title">StatHub Datametrics</div>
@@ -158,7 +152,6 @@ if current_page != "admin":
 
 # --- ADMIN PORTAL ---
 else:
-    # Build a persistent text element using Session State to avoid rendering conflicts
     if "admin_authenticated" not in st.session_state:
         st.session_state.admin_authenticated = False
 
@@ -173,21 +166,14 @@ else:
         elif password_input:
             st.error("Access Denied: Incorrect Admin Password Credentials.")
 
-    # Show dashboard metrics only when successfully authenticated
     if st.session_state.admin_authenticated:
         st.title("🛡️ Admin Dashboard")
         st.markdown("---")
         
-        # Calculate specialized operational KPIs
         total_registered = len(df)
-        
-        # People who logged in / entered access details at least once
         total_logged_in = len(df[df["join_count"] > 0]) if not df.empty else 0
-        
-        # Total sum of clicks/joins across the event lifetime
         total_clicks_count = int(df["join_count"].sum()) if not df.empty else 0
 
-        # Render KPI Cards
         col1, col2, col3 = st.columns(3)
         with col1:
             st.metric(label="👥 Registered Attendees", value=total_registered)
@@ -199,7 +185,6 @@ else:
         st.markdown("### 📊 Live Google Sheets Database Sync")
         st.dataframe(df, use_container_width=True)
         
-        # Optional logout button
         if st.button("Log Out of Admin"):
             st.session_state.admin_authenticated = False
             st.rerun()
