@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "stathubmasterexcel",
+  "private_key_id": "3947e20526e07eaafc9ee60020b1dbce8e3c4bcb",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCjGuZwDhnfOiPL\nAXXw3bYGRVDRCT2dZiw9ZNyRziwV4KqfSojCuxmpCqLIQgr5fibFfCRxW/2s3YCD\n96yD8qkx441M2V1ZtDq1LelgHy+f/oQFFzObaxwhdQ7q1+rzefPI278LKKaq99UL\n5i0xjLaVxR/cRsiSkbkCzR5hzSMpKM3UjQcRoTOlxB36rwbe2IknYphxLiOp/y+W\nH/799KbGbmE8nNyyPPeUuvEH+maJEeEt3O26XLrIDT9Qo0XW+sA0zUePv0qWZpbO\n4dToZ1NSV6gLJKh78/xl7Y20Kp30bG4knUwsPujiGAsyv3PxS6q0MqyGY4ekE2kF\nWxwH0xz3AgMBAAECggEADjkjTTQ9l1THmEVZVpbO778NrBzlLZuiUfxAq8pR19qO\npnNmd6y/MRmHVnVD5bvVf7UyrFv8RB3QvjFT7vGzRXF1efUeidsIn5IQXtx5V7dn\nJdZ/Hpd5jYVatqn7iB3jX2miQEPcPN59yprY6BBAP9E/1QKrLPTeMFtYweiUn1sW\n7DgENxkzFhqbPTqCvC2igfZXHVvg2iosebqVVvjSjgAM/goQTuyqi/djyPceCvxV\nB/906jN9o6TKs0jJVMdltunBX5XeiLN+erQZeok5LEk6W5y9a8SrZ62yty0SwvD/\nbGWUnAEe8K5fUvqM/zOMvsLO9GnwrvSu73IZfZxtAQKBgQDNxhvdTu4jod2fbZ0t\nKUARBDcPNwRaQntd0HTu13zqD46DrUsvtSflt2P2Wr8NpGHoD+y9dd0B32+TH4J2\nUJixx2H7iNRowx0dpFUeuatdic6z3HwxTDObQtFNEYo3Q5UiPbw5VA9RIazFsyVg\nQGo3h9gQRSvPmuyvCYnhPnUmgQKBgQDK6pv3le5oKDKVrB+am6SfZTQti+nPlYSB\n6HiILKRfo7hbbZYbI3jlOJa7lxuWb6rpHE3EmN+W51ekwKwjcb62wDkR0uZ8p26Z\nizCmp7y8ELnAOlhTr8UTOV5Z8yGuOg6Z6oHinpenFIdm8bLk5FMvbiHS5Ns2zv3g\n/mnvxNi3dwKBgB+XwQNzcOCLo4ksvSsH4Ew8h2+QlNx+xI4cyTc6YnVVOh5BZv/G\nIoAEbhaOzDJ+AIIun7xe8jWtZmYCOneL3EW/RO3njiUff8LjTiZPf133IINA4Nh4\nyJuX4KaigMQHXkhJjjKHE2rzbqFT5fMnMKeh9axZ0mYndRtSrZaljjsBAoGAdLPR\n1+dHImhcD3DbDFSPrYzLIZbidh0MBJrrF4Z1UvwaP5sbRah1E4AkUOdrWm4G4eMB\nZxx1G5kZ8wtM9WWpxflv2SxumyrAlVZUOMUn6xHDgycLPbZNpezMsvb+W/HQC/2v\njeKgXduUtEQ2GyamIRU6Jsywtyj9IrWvv9J6wakCgYEAlJy9spvY1C1zsWFD9ny9\ngE2X1Nabmkl1v79jiKL+mXlT192CbOM25R7mdtcQ02DaDUOWlkSB9meRtyhrpPp+\njAAbgCOGGQkkl1MLqP1cLuPz/iNOs9fAwDwxjX39QbDAeWPHhsVVMuCSiDolfdN7\nHTi29QIRPDf0Kn0onZw2vrI=\n-----END PRIVATE KEY-----\n",
+  "client_email": "stathub-event-access@stathubmasterexcel.iam.gserviceaccount.com",
+  "client_id": "110239162616302588297",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/stathub-event-access%40stathubmasterexcel.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
