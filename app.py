@@ -24,8 +24,8 @@ st.markdown("""
             padding-top: 3rem !important;
         }
         .attendee-card {
-            background: linear-gradient(135deg, #0d1b2a 0%, #1b4965 100%);
-            border: 1px solid #ffffff;
+            background: #ffffff;
+            border: 1px solid #009DD9;
             padding: 3rem 2.5rem;
             border-radius: 16px;
             box-shadow: 0 8px 32px 0 rgba(0, 180, 216, 0.2);
