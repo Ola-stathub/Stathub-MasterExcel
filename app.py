@@ -6,7 +6,7 @@ from datetime import datetime
 from google.oauth2.service_account import Credentials
 
 MEET_LINK = "https://meet.google.com/yfi-asbp-hog"
-MAX_JOINS = 3
+MAX_JOINS = 10
 ADMIN_PASSWORD = "AdeolaJane"
 GOOGLE_SHEET_NAME = "StatHub Event Database"
 
